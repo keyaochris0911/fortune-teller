@@ -208,19 +208,21 @@ export default function App() {
       // Animate cookies
       cookieRefs.current.forEach((ref, i) => {
         if (ref && !openedToday.includes(i + 1)) {
+          const offset = isMobile ? MOBILE_COOKIE_OFFSETS[i] : COOKIE_OFFSETS[i];
           gsap.fromTo(ref, 
-            { y: 500, opacity: 0, scale: 0.5 },
+            { x: offset.x, y: offset.y + 500, rotation: offset.rotate, opacity: 0, scale: 0.5 },
             { 
-              y: 0, 
+              x: offset.x,
+              y: offset.y, 
+              rotation: offset.rotate,
               opacity: 1, 
               scale: 1, 
               duration: 1, 
               delay: 0.2 + (i * 0.15),
               ease: "back.out(1.7)",
               onComplete: () => {
-                // Idle animation
                 gsap.to(ref, {
-                  y: "-=3",
+                  y: offset.y - 3,
                   duration: 1.5 + Math.random(),
                   repeat: -1,
                   yoyo: true,
@@ -808,7 +810,6 @@ export default function App() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      transform: `translate(${offset.x}px, ${offset.y}px) rotate(${offset.rotate}deg)`,
       cursor: openedToday.includes(index + 1) ? 'default' : 'pointer',
       transition: 'transform 0.25s ease-out, filter 0.25s ease-out',
       filter: openedToday.includes(index + 1) ? 'grayscale(1) opacity(0.2)' : 'drop-shadow(0 4px 6px rgba(0,0,0,0.2))',
@@ -918,19 +919,16 @@ export default function App() {
                       handleCookieTap();
                     }
                   }}
-                  onMouseEnter={(e) => {
+                  onMouseEnter={() => {
                     if (appState === 'selecting' && !openedToday.includes(num)) {
-                      const el = e.currentTarget;
-                      el.style.transform += ' translateY(-10px) scale(1.1)';
-                      el.style.filter = 'drop-shadow(0 12px 15px rgba(0,0,0,0.4))';
+                      const offset = isMobile ? MOBILE_COOKIE_OFFSETS[i] : COOKIE_OFFSETS[i];
+                      gsap.to(cookieRefs.current[i], { y: offset.y - 10, scale: 1.1, duration: 0.25, ease: 'power2.out' });
                     }
                   }}
-                  onMouseLeave={(e) => {
+                  onMouseLeave={() => {
                     if (appState === 'selecting' && !openedToday.includes(num)) {
-                      const el = e.currentTarget;
-                      const offset = COOKIE_OFFSETS[i];
-                      el.style.transform = `translate(${offset.x}px, ${offset.y}px) rotate(${offset.rotate}deg)`;
-                      el.style.filter = 'drop-shadow(0 4px 6px rgba(0,0,0,0.2))';
+                      const offset = isMobile ? MOBILE_COOKIE_OFFSETS[i] : COOKIE_OFFSETS[i];
+                      gsap.to(cookieRefs.current[i], { y: offset.y, scale: 1, duration: 0.25, ease: 'power2.out' });
                     }
                   }}
                 >
