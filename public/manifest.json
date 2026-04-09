@@ -1,0 +1,22 @@
+{
+  "name": "Fortune Teller",
+  "short_name": "Fortune",
+  "description": "Crack open your daily fortune cookie",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAF8E8",
+  "theme_color": "#B2DFDB",
+  "icons": [
+    {
+      "src": "/visual/logo-fortune-teller.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/visual/logo-fortune-teller.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
