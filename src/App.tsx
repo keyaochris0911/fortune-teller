@@ -37,10 +37,10 @@ const LUCKY_COLORS = [
 ];
 
 const MOBILE_COOKIE_OFFSETS = [
-  { x: -100, y: -70, rotate: -15 },
-  { x:  100, y: -70, rotate:  15 },
-  { x: -100, y:  70, rotate: -10 },
-  { x:  100, y:  70, rotate:  10 }
+  { x: -105, y: -95, rotate: -15 },
+  { x:  105, y: -95, rotate:  15 },
+  { x: -105, y:  95, rotate: -10 },
+  { x:  105, y:  95, rotate:  10 }
 ];
 
 const COOKIE_OFFSETS = [
@@ -250,7 +250,7 @@ export default function App() {
             x: 0,
             y: 0,
             rotation: 0,
-            scale: isMobile ? 1.4 : 2.5,
+            scale: isMobile ? 2.2 : 2.5,
             duration: 0.6,
             ease: "power3.out",
             zIndex: 100,
@@ -791,7 +791,7 @@ export default function App() {
     position: 'relative',
     width: '100%',
     maxWidth: '1000px',
-    height: isMobile ? '340px' : '300px',
+    height: isMobile ? '390px' : '300px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -803,8 +803,8 @@ export default function App() {
     
     return {
       position: 'absolute',
-      width: '180px',
-      height: '180px',
+      width: isMobile ? '155px' : '180px',
+      height: isMobile ? '155px' : '180px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -938,7 +938,7 @@ export default function App() {
                     <img 
                       src={`/visual/cookie-${num}.png`} 
                       alt={`Cookie ${num}`} 
-                      style={{ width: isMobile ? '160px' : '320px', height: isMobile ? '160px' : '320px', minWidth: isMobile ? '160px' : '320px', objectFit: 'contain' }}
+                      style={{ width: isMobile ? '155px' : '320px', height: isMobile ? '155px' : '320px', minWidth: isMobile ? '155px' : '320px', objectFit: 'contain' }}
                       referrerPolicy="no-referrer"
                     />
                   ) : (
@@ -965,7 +965,7 @@ export default function App() {
             onTouchStart={handleDragStart}
           >
             {/* 800px container matches the 320px image scaled by 2.5 from the 'selected' state */}
-            <div style={{ position: 'relative', width: isMobile ? '100vw' : '800px', height: isMobile ? '100vw' : '800px' }}>
+            <div style={{ position: 'relative', width: '800px', height: '800px', transform: isMobile ? 'scale(0.43)' : 'none', transformOrigin: 'center center' }}>
               {/* Hint Text */}
               {appState === 'splitting' && splitGap < 20 && (
                 <div 
