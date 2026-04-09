@@ -36,6 +36,13 @@ const LUCKY_COLORS = [
   { name: "Lilac", hex: "#C8A2C8" }
 ];
 
+const MOBILE_COOKIE_OFFSETS = [
+  { x: -90, y: -50, rotate: -15 },
+  { x:  90, y: -50, rotate:  15 },
+  { x: -90, y:  80, rotate: -10 },
+  { x:  90, y:  80, rotate:  10 }
+];
+
 const COOKIE_OFFSETS = [
   { x: -360, y: 20, rotate: -20 },
   { x: -120, y: -20, rotate: -8 },
@@ -126,6 +133,16 @@ export default function App() {
     }
 
     // Check screen size
+    const imagesToPreload = [
+      '/visual/paper-slip.webp',
+      '/visual/parchment.webp',
+      '/visual/cookie-1.png',
+      '/visual/cookie-2.png',
+      '/visual/cookie-3.png',
+      '/visual/cookie-4.png',
+      window.innerWidth <= 768 ? '/visual/bg-table-mobile.webp' : '/visual/bg-table-desktop.webp'
+    ];
+    imagesToPreload.forEach(src => { const img = new Image(); img.src = src; });
     const checkMobile = () => setIsMobile(window.innerWidth <= 768);
     checkMobile();
     window.addEventListener('resize', checkMobile);
@@ -232,7 +249,7 @@ export default function App() {
           gsap.to(ref, {
             x: 0,
             y: 0,
-            scale: 2.5,
+            scale: isMobile ? 1.8 : 2.5,
             duration: 0.6,
             ease: "power3.out",
             zIndex: 100,
@@ -496,7 +513,7 @@ export default function App() {
 
       // Paper slip image
       const img = document.createElement('img');
-      img.src = '/visual/paper-slip.png';
+      img.src = '/visual/paper-slip.webp';
       img.style.width = '100%';
       img.style.height = '100%';
       img.style.objectFit = 'contain';
@@ -680,7 +697,8 @@ export default function App() {
   const containerStyle: React.CSSProperties = {
     position: 'relative',
     width: '100%',
-    height: '100vh',
+    height: '100dvh',
+    minHeight: '-webkit-fill-available',
     overflow: 'hidden',
     display: 'flex',
     alignItems: 'center',
@@ -693,7 +711,7 @@ export default function App() {
   const bgStyle: React.CSSProperties = {
     position: 'absolute',
     inset: 0,
-    backgroundImage: `url(${isMobile ? '/visual/bg-table-mobile.png' : '/visual/bg-table-desktop.png'})`,
+    backgroundImage: `url(${isMobile ? '/visual/bg-table-mobile.webp' : '/visual/bg-table-desktop.webp'})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     transition: 'opacity 0.5s duration'
@@ -759,17 +777,20 @@ export default function App() {
   const onboardingTextStyle: React.CSSProperties = {
     color: 'white',
     fontFamily: "'Playfair Display', serif",
-    fontSize: '50px',
+    fontSize: isMobile ? '26px' : '50px',
     fontWeight: 'bold',
     letterSpacing: '0.05em',
-    textShadow: '0 2px 4px rgba(0,0,0,0.3)'
+    textShadow: '0 2px 4px rgba(0,0,0,0.3)',
+    textAlign: 'center',
+    width: '90%',
+    padding: '0 20px'
   };
 
   const cookiesContainerStyle: React.CSSProperties = {
     position: 'relative',
     width: '100%',
     maxWidth: '1000px',
-    height: '300px',
+    height: isMobile ? '280px' : '300px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -777,7 +798,7 @@ export default function App() {
   };
 
   const getCookieStyle = (index: number): React.CSSProperties => {
-    const offset = COOKIE_OFFSETS[index];
+    const offset = isMobile ? MOBILE_COOKIE_OFFSETS[index] : COOKIE_OFFSETS[index];
     
     return {
       position: 'absolute',
@@ -821,7 +842,7 @@ export default function App() {
         {/* Top Navigation */}
         <div style={navStyle}>
           <button onClick={() => setAppState('history')} style={iconButtonStyle} title="History">
-            <img src="/visual/wall-calendar-icon.png" alt="History" style={{ width: '100%', height: '100%', objectFit: 'contain' }} referrerPolicy="no-referrer" />
+            <img src="/visual/wall-calendar-icon.webp" alt="History" style={{ width: '100%', height: '100%', objectFit: 'contain' }} referrerPolicy="no-referrer" />
           </button>
           <button onClick={() => console.log("Settings Clicked")} style={gearButtonStyle} title="Settings">⚙️</button>
         </div>
@@ -851,11 +872,12 @@ export default function App() {
               style={{
                 ...onboardingTextStyle,
                 position: 'absolute',
-                top: '10%',
+                top: isMobile ? '42%' : '10%',
                 opacity: 0,
                 textAlign: 'center',
                 width: '100%',
-                margin: 0
+                margin: 0,
+                fontSize: isMobile ? '22px' : '50px'
               }}
             >
               Pick your fortune for today
@@ -915,7 +937,7 @@ export default function App() {
                     <img 
                       src={`/visual/cookie-${num}.png`} 
                       alt={`Cookie ${num}`} 
-                      style={{ width: '320px', height: '320px', minWidth: '320px', objectFit: 'contain' }}
+                      style={{ width: isMobile ? '130px' : '320px', height: isMobile ? '130px' : '320px', minWidth: isMobile ? '130px' : '320px', objectFit: 'contain' }}
                       referrerPolicy="no-referrer"
                     />
                   ) : (
@@ -988,7 +1010,7 @@ export default function App() {
               >
                 <div style={{ position: 'relative', width: '600px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <img 
-                    src="/visual/paper-slip.png" 
+                    src="/visual/paper-slip.webp" 
                     alt="Paper Slip" 
                     style={{ 
                       width: '100%',
@@ -1119,7 +1141,7 @@ export default function App() {
                 WebkitTouchCallout: 'none'
               }}
             >
-              <img src="/visual/paper-slip.png" alt="Paper Slip" style={{ width: '130%', height: 'auto', objectFit: 'contain' }} referrerPolicy="no-referrer" />
+              <img src="/visual/paper-slip.webp" alt="Paper Slip" style={{ width: '130%', height: 'auto', objectFit: 'contain' }} referrerPolicy="no-referrer" />
               {showQuoteText && (
                 <div 
                   style={{ 
@@ -1189,7 +1211,7 @@ export default function App() {
                     maxWidth: '240px',
                     maxHeight: '55vh',
                     backgroundColor: 'transparent',
-                    backgroundImage: "url('/visual/parchment.png')",
+                    backgroundImage: "url('/visual/parchment.webp')",
                     backgroundSize: '100% 100%',
                     backgroundRepeat: 'no-repeat',
                     padding: '15% 12%',
@@ -1362,7 +1384,7 @@ export default function App() {
             position: 'absolute',
             inset: 0,
             zIndex: 50,
-            backgroundImage: "url('/visual/bg-history.png')",
+            backgroundImage: "url('/visual/bg-history.webp')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundColor: '#2C1810',
