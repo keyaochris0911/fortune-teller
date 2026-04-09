@@ -37,10 +37,10 @@ const LUCKY_COLORS = [
 ];
 
 const MOBILE_COOKIE_OFFSETS = [
-  { x: -90, y: -50, rotate: -15 },
-  { x:  90, y: -50, rotate:  15 },
-  { x: -90, y:  80, rotate: -10 },
-  { x:  90, y:  80, rotate:  10 }
+  { x: -100, y: -70, rotate: -15 },
+  { x:  100, y: -70, rotate:  15 },
+  { x: -100, y:  70, rotate: -10 },
+  { x:  100, y:  70, rotate:  10 }
 ];
 
 const COOKIE_OFFSETS = [
@@ -249,7 +249,8 @@ export default function App() {
           gsap.to(ref, {
             x: 0,
             y: 0,
-            scale: isMobile ? 1.8 : 2.5,
+            rotation: 0,
+            scale: isMobile ? 1.4 : 2.5,
             duration: 0.6,
             ease: "power3.out",
             zIndex: 100,
@@ -790,7 +791,7 @@ export default function App() {
     position: 'relative',
     width: '100%',
     maxWidth: '1000px',
-    height: isMobile ? '280px' : '300px',
+    height: isMobile ? '340px' : '300px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -937,7 +938,7 @@ export default function App() {
                     <img 
                       src={`/visual/cookie-${num}.png`} 
                       alt={`Cookie ${num}`} 
-                      style={{ width: isMobile ? '130px' : '320px', height: isMobile ? '130px' : '320px', minWidth: isMobile ? '130px' : '320px', objectFit: 'contain' }}
+                      style={{ width: isMobile ? '160px' : '320px', height: isMobile ? '160px' : '320px', minWidth: isMobile ? '160px' : '320px', objectFit: 'contain' }}
                       referrerPolicy="no-referrer"
                     />
                   ) : (
@@ -964,7 +965,7 @@ export default function App() {
             onTouchStart={handleDragStart}
           >
             {/* 800px container matches the 320px image scaled by 2.5 from the 'selected' state */}
-            <div style={{ position: 'relative', width: '800px', height: '800px' }}>
+            <div style={{ position: 'relative', width: isMobile ? '100vw' : '800px', height: isMobile ? '100vw' : '800px' }}>
               {/* Hint Text */}
               {appState === 'splitting' && splitGap < 20 && (
                 <div 
@@ -1095,9 +1096,9 @@ export default function App() {
               {/* Canvas Overlay for Crumbs */}
               <canvas 
                 ref={canvasRef} 
-                width={800} 
-                height={800} 
-                style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 15 }} 
+                width={isMobile ? window.innerWidth : 800} 
+                height={isMobile ? window.innerWidth : 800} 
+                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 15 }} 
               />
             </div>
           </div>
