@@ -37,10 +37,10 @@ const LUCKY_COLORS = [
 ];
 
 const MOBILE_COOKIE_OFFSETS = [
-  { x: -105, y: -95, rotate: -15 },
-  { x:  105, y: -95, rotate:  15 },
-  { x: -105, y:  95, rotate: -10 },
-  { x:  105, y:  95, rotate:  10 }
+  { x: -92, y: -95, rotate: -15 },
+  { x:  92, y: -95, rotate:  15 },
+  { x: -92, y:  95, rotate: -10 },
+  { x:  92, y:  95, rotate:  10 }
 ];
 
 const COOKIE_OFFSETS = [
@@ -793,7 +793,7 @@ export default function App() {
     position: 'relative',
     width: '100%',
     maxWidth: '1000px',
-    height: isMobile ? '390px' : '300px',
+    height: isMobile ? '410px' : '300px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -805,8 +805,8 @@ export default function App() {
     
     return {
       position: 'absolute',
-      width: isMobile ? '155px' : '180px',
-      height: isMobile ? '155px' : '180px',
+      width: isMobile ? '180px' : '180px',
+      height: isMobile ? '180px' : '180px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -874,7 +874,7 @@ export default function App() {
               style={{
                 ...onboardingTextStyle,
                 position: 'absolute',
-                top: isMobile ? '42%' : '10%',
+                top: isMobile ? '22%' : '10%',
                 opacity: 0,
                 textAlign: 'center',
                 width: '100%',
@@ -936,7 +936,7 @@ export default function App() {
                     <img 
                       src={`/visual/cookie-${num}.png`} 
                       alt={`Cookie ${num}`} 
-                      style={{ width: isMobile ? '155px' : '320px', height: isMobile ? '155px' : '320px', minWidth: isMobile ? '155px' : '320px', objectFit: 'contain' }}
+                      style={{ width: isMobile ? '180px' : '320px', height: isMobile ? '180px' : '320px', minWidth: isMobile ? '180px' : '320px', objectFit: 'contain' }}
                       referrerPolicy="no-referrer"
                     />
                   ) : (
@@ -976,7 +976,7 @@ export default function App() {
                     fontFamily: "'Playfair Display', serif",
                     fontStyle: 'italic',
                     fontWeight: 'bold',
-                    fontSize: '24px',
+                    fontSize: isMobile ? '30px' : '24px',
                     textShadow: '0 2px 8px rgba(0,0,0,0.5)',
                     textAlign: 'center',
                     animation: 'fadeIn 0.8s ease-out forwards',
