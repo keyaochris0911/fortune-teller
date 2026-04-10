@@ -33,21 +33,120 @@ const LUCKY_COLORS = [
   { name: "Blush", hex: "#DE5D83" },
   { name: "Ocean", hex: "#006994" },
   { name: "Honey", hex: "#EB9605" },
-  { name: "Lilac", hex: "#C8A2C8" }
+  { name: "Lilac", hex: "#C8A2C8" },
+  { name: "Dusty Rose", hex: "#DCAE96" },
+  { name: "Seafoam", hex: "#71EEB8" },
+  { name: "Champagne", hex: "#F7E7CE" },
+  { name: "Cobalt", hex: "#0047AB" },
+  { name: "Terracotta", hex: "#E2725B" },
+  { name: "Pistachio", hex: "#93C572" },
+  { name: "Plum", hex: "#8E4585" },
+  { name: "Sand", hex: "#C2B280" },
+  { name: "Electric Blue", hex: "#7DF9FF" },
+  { name: "Burgundy", hex: "#800020" },
+  { name: "Butter", hex: "#FFFAA0" },
+  { name: "Steel Blue", hex: "#4682B4" },
+  { name: "Apricot", hex: "#FBCEB1" },
+  { name: "Forest Green", hex: "#228B22" },
+  { name: "Wisteria", hex: "#C9A0DC" },
+  { name: "Rust", hex: "#B7410E" },
+  { name: "Powder Blue", hex: "#B0E0E6" },
+  { name: "Mulberry", hex: "#C54B8C" },
+  { name: "Chartreuse", hex: "#DFFF00" },
+  { name: "Denim", hex: "#1560BD" },
+  { name: "Petal", hex: "#FFD5E5" },
+  { name: "Jade", hex: "#00A86B" },
+  { name: "Cinnamon", hex: "#D2691E" },
+  { name: "Periwinkle Blue", hex: "#8F99FB" },
+  { name: "Fern", hex: "#4F7942" },
+  { name: "Flamingo", hex: "#FC8EAC" },
+  { name: "Topaz", hex: "#FFC87C" },
+  { name: "Indigo", hex: "#4B0082" },
+  { name: "Celadon", hex: "#ACE1AF" },
+  { name: "Scarlet", hex: "#FF2400" },
+  { name: "Dusk", hex: "#B69AC9" },
+  { name: "Olive", hex: "#808000" },
+  { name: "Cotton Candy", hex: "#FFBCD9" },
+  { name: "Cerulean", hex: "#007BA7" },
+  { name: "Copper", hex: "#B87333" },
+  { name: "Orchid", hex: "#DA70D6" },
+  { name: "Moss", hex: "#8A9A5B" },
+  { name: "Glacier", hex: "#80B9C4" },
+  { name: "Auburn", hex: "#A52A2A" },
+  { name: "Moonstone", hex: "#3AA8C1" },
+  { name: "Blossom", hex: "#FFB7C5" },
+  { name: "Spruce", hex: "#4A7C59" },
+  { name: "Sorbet", hex: "#FD7C6E" },
+  { name: "Daffodil", hex: "#FFFF31" },
+  { name: "Twilight", hex: "#4A4E69" },
+  { name: "Mineral", hex: "#7B9EA6" },
+  { name: "Papaya", hex: "#FF9B5E" },
+  { name: "Amethyst", hex: "#9966CC" },
+  { name: "Rosewood", hex: "#65000B" },
+  { name: "Aqua", hex: "#00FFFF" },
+  { name: "Ecru", hex: "#C2B49A" },
+  { name: "Violet", hex: "#7F00FF" },
+  { name: "Straw", hex: "#E4D96F" },
+  { name: "Merlot", hex: "#73343A" },
+  { name: "Glacier Blue", hex: "#A8D8EA" },
+  { name: "Cactus", hex: "#587B7F" },
+  { name: "Lychee", hex: "#FE5BAC" },
+  { name: "Wheat", hex: "#F5DEB3" },
+  { name: "Sapphire", hex: "#0F52BA" },
+  { name: "Magnolia", hex: "#F8F4FF" },
+  { name: "Ember", hex: "#CC4400" },
+  { name: "Spearmint", hex: "#1FFFA5" },
+  { name: "Mocha", hex: "#967259" },
+  { name: "Thistle", hex: "#D8BFD8" },
+  { name: "Lapis", hex: "#26619C" },
+  { name: "Persimmon", hex: "#EC5800" },
+  { name: "Willow", hex: "#A4C639" },
+  { name: "Parchment", hex: "#F1E9D2" },
+  { name: "Garnet", hex: "#733635" },
+  { name: "Aquamarine", hex: "#7FFFD4" },
+  { name: "Caramel", hex: "#C68642" },
+  { name: "Viola", hex: "#CF9FFF" },
+  { name: "Sprout", hex: "#8DB600" },
+  { name: "Rosewater", hex: "#FF9F9F" },
+  { name: "Stone", hex: "#928E85" },
+  { name: "Turquoise", hex: "#40E0D0" },
+  { name: "Claret", hex: "#7F1734" },
+  { name: "Sunbeam", hex: "#FFE169" },
+  { name: "Fog", hex: "#C9C0BB" },
+  { name: "Mango", hex: "#FDBE02" },
+  { name: "Dewdrop", hex: "#D4F1F9" },
+  { name: "Maroon", hex: "#800000" },
+  { name: "Primrose", hex: "#F4BBD3" },
+  { name: "Fuchsia", hex: "#FF00FF" },
+  { name: "Lemon", hex: "#FFF44F" },
+  { name: "Midnight", hex: "#191970" },
+  { name: "Pear", hex: "#D1E231" },
+  { name: "Macaron", hex: "#F5A7A7" },
+  { name: "Lagoon", hex: "#00827F" },
+  { name: "Sunrise", hex: "#FFA07A" },
+  { name: "Cashmere", hex: "#E8C9A0" },
+  { name: "Aurora", hex: "#78D5E3" },
+  { name: "Raspberry", hex: "#E30B5C" },
+  { name: "Eucalyptus", hex: "#44D7A8" },
+  { name: "Sienna", hex: "#A0522D" },
+  { name: "Iris", hex: "#5A4FCF" },
+  { name: "Linen", hex: "#FAF0E6" },
+  { name: "Vermillion", hex: "#E34234" },
+  { name: "Pewter", hex: "#96A8A1" },
 ];
 
 const MOBILE_COOKIE_OFFSETS = [
-  { x: -92, y: -95, rotate: -15 },
-  { x:  92, y: -95, rotate:  15 },
-  { x: -92, y:  95, rotate: -10 },
-  { x:  92, y:  95, rotate:  10 }
+  { x: -80, y: -70, rotate: -15 },
+  { x:  80, y: -70, rotate:  15 },
+  { x: -80, y:  70, rotate: -10 },
+  { x:  80, y:  70, rotate:  10 }
 ];
 
 const COOKIE_OFFSETS = [
-  { x: -360, y: 20, rotate: -20 },
-  { x: -120, y: -20, rotate: -8 },
-  { x: 120, y: -20, rotate: 8 },
-  { x: 360, y: 20, rotate: 20 }
+  { x: -360, y: 0, rotate: -20 },
+  { x: -120, y: 0, rotate: -8 },
+  { x: 120, y: 0, rotate: 8 },
+  { x: 360, y: 0, rotate: 20 }
 ];
 
 export default function App() {
@@ -286,8 +385,7 @@ export default function App() {
   const handleCookieTap = () => {
     if (appState !== 'selected' || selectedCookieIndex === null) return;
 
-    if (DEV_MODE) console.log("State Transition: selected -> cracking");
-    setAppState('cracking');
+    // State will transition after shake completes
     
     // Generate jagged crack parameters
     splitCenterRef.current = 42 + Math.random() * 16;
@@ -300,7 +398,9 @@ export default function App() {
     jaggedOffsetsRef.current = offsets;
 
     // Pick random fortune early so it's visible during splitting
-    const randomFortune = FORTUNE_QUOTES[Math.floor(Math.random() * FORTUNE_QUOTES.length)];
+    const randomFortune = FORTUNE_QUOTES.length > 0
+      ? FORTUNE_QUOTES[Math.floor(Math.random() * FORTUNE_QUOTES.length)]
+      : "Your fortune is written in the stars; return soon to read it again.";
     setFortuneText(randomFortune);
 
     // Play crack sound
@@ -320,7 +420,6 @@ export default function App() {
         yoyo: true,
         ease: "sine.inOut",
         onComplete: () => {
-          if (DEV_MODE) console.log("State Transition: cracking -> splitting");
           setAppState('splitting');
         }
       });
@@ -398,7 +497,6 @@ export default function App() {
 
   const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
     if (appState !== 'splitting') return;
-    e.preventDefault();
     setIsDragging(true);
     const x = 'touches' in e ? e.touches[0].clientX : e.clientX;
     setStartX(x);
@@ -437,27 +535,44 @@ export default function App() {
   const handleFullSplit = () => {
     if (DEV_MODE) console.log("State Transition: splitting -> revealing_slip");
     setIsDragging(false);
-    setAppState('revealing_slip');
+    const splitSlip = document.querySelector('.split-slip-wrapper') as HTMLElement;
+    if (splitSlip) {
+      gsap.to(splitSlip, { opacity: 0, duration: 0.2, onComplete: () => setAppState('revealing_slip') });
+    } else {
+      setAppState('revealing_slip');
+    }
     
     // Generate/Load daily fortune data
     const storedFortune = localStorage.getItem(`fortune_${todayKey}`);
+    let data;
     if (storedFortune) {
-      setFortuneData(JSON.parse(storedFortune));
+      data = JSON.parse(storedFortune);
+      setFortuneData(data);
+      if (!fortuneText) {
+        setFortuneText("Your fortune is written in the stars; return soon to read it again.");
+      }
     } else {
       const seededRandom = (seed: string) => {
-        let hash = 0;
+        let h = 1779033703 ^ seed.length;
         for (let i = 0; i < seed.length; i++) {
-          hash = ((hash << 5) - hash) + seed.charCodeAt(i);
-          hash |= 0;
+          h = Math.imul(h ^ seed.charCodeAt(i), 3432918353);
+          h = (h << 13) | (h >>> 19);
         }
+        h = Math.imul(h ^ (h >>> 16), 2246822507);
+        h = Math.imul(h ^ (h >>> 13), 3266489909);
+        h ^= h >>> 16;
+        let state = h >>> 0;
         return () => {
-          hash = (hash * 16807) % 2147483647;
-          return (hash - 1) / 2147483646;
+          state |= 0;
+          state = state + 0x6D2B79F5 | 0;
+          let t = Math.imul(state ^ (state >>> 15), 1 | state);
+          t = t + Math.imul(t ^ (t >>> 7), 61 | t) ^ t;
+          return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
         };
       };
       
       const rand = seededRandom(todayKey);
-      const data = {
+      data = {
         color: LUCKY_COLORS[Math.floor(rand() * LUCKY_COLORS.length)],
         wealth: Math.floor(rand() * 8) * 0.5 + 1.5,
         love: Math.floor(rand() * 8) * 0.5 + 1.5,
@@ -480,18 +595,24 @@ export default function App() {
     localStorage.setItem(`opened_${todayKey}`, JSON.stringify(newOpened));
     localStorage.setItem('cracked_before', 'true');
 
-    // Save to history
+    // Save to history (deduplicated by cookie index + date)
     const historyKey = 'fortune_history';
     const existingHistory = JSON.parse(localStorage.getItem(historyKey) || '[]');
-    existingHistory.unshift({
-      date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
-      quote: fortuneText,
-      color: fortuneData?.color || LUCKY_COLORS[0],
-      wealth: fortuneData?.wealth || 3,
-      love: fortuneData?.love || 3,
-      career: fortuneData?.career || 3
-    });
-    localStorage.setItem(historyKey, JSON.stringify(existingHistory));
+    const todayStr = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    const cookieKey = `${todayStr}-cookie${(selectedCookieIndex || 0) + 1}`;
+    const alreadySaved = existingHistory.some((item: any) => item.cookieKey === cookieKey);
+    if (!alreadySaved) {
+      existingHistory.unshift({
+        cookieKey,
+        date: todayStr,
+        quote: fortuneText,
+        color: data.color,
+        wealth: data.wealth,
+        love: data.love,
+        career: data.career
+      });
+      localStorage.setItem(historyKey, JSON.stringify(existingHistory));
+    }
   };
 
   const handleRevealFortune = () => {
@@ -541,13 +662,29 @@ export default function App() {
       // Apply same line-break logic as formatFortune()
       const breakChars = [',', ';', '.'];
       let formattedText = fortuneText;
+      let foundBreak = false;
       for (const char of breakChars) {
         const idx = fortuneText.indexOf(char);
         if (idx !== -1 && idx > 10 && idx < fortuneText.length - 10) {
           formattedText = fortuneText.substring(0, idx + 1) + '\n' + fortuneText.substring(idx + 1).trim();
+          foundBreak = true;
           break;
         }
       }
+      
+      // Mobile fallback for saved image if no natural break found
+      if (!foundBreak && isMobile && fortuneText.length > 30) {
+        const mid = Math.floor(fortuneText.length / 2);
+        let splitIdx = -1;
+        for (let i = 0; i <= 10; i++) {
+          if (fortuneText[mid + i] === ' ') { splitIdx = mid + i; break; }
+          if (fortuneText[mid - i] === ' ') { splitIdx = mid - i; break; }
+        }
+        if (splitIdx !== -1) {
+          formattedText = fortuneText.substring(0, splitIdx) + '\n' + fortuneText.substring(splitIdx + 1);
+        }
+      }
+
       textDiv.style.whiteSpace = 'pre-line';
       textDiv.textContent = formattedText;
       captureDiv.appendChild(textDiv);
@@ -599,7 +736,8 @@ export default function App() {
     window.location.reload();
   };
 
-  const formatFortune = (text: string) => {
+  const formatFortune = (text?: string) => {
+    if (!text) return "";
     const breakPoints = [',', ';', '.'];
     for (let char of breakPoints) {
       const idx = text.indexOf(char);
@@ -613,30 +751,47 @@ export default function App() {
         );
       }
     }
+    // Mobile fallback: if text is long and no natural break found, split at nearest space to midpoint
+    if (isMobile && text.length > 30) {
+      const mid = Math.floor(text.length / 2);
+      let splitIdx = -1;
+      for (let i = 0; i <= 10; i++) {
+        if (text[mid + i] === ' ') { splitIdx = mid + i; break; }
+        if (text[mid - i] === ' ') { splitIdx = mid - i; break; }
+      }
+      if (splitIdx !== -1) {
+        return (
+          <>
+            {text.substring(0, splitIdx)}
+            <br />
+            {text.substring(splitIdx + 1)}
+          </>
+        );
+      }
+    }
     return text;
   };
 
   // Step 5: Animation Sequence
   useEffect(() => {
     if (appState === 'revealing_slip' && slipRef.current) {
-      // Initial entrance when it first appears after splitting
       gsap.killTweensOf(slipRef.current);
-     gsap.fromTo(slipRef.current,
-        { opacity: 0, top: '20%', scale: 0.8 },
+      setShowQuoteText(true);
+      gsap.fromTo(slipRef.current,
+        { opacity: 0, top: isMobile ? '55%' : '45%', scale: 0.85 },
         { 
           opacity: 1, 
-          top: '20%', 
+          top: isMobile ? '42%' : '20%', 
           scale: 1, 
-          duration: 0.8, 
-          ease: "power2.out",
-          onComplete: () => setShowQuoteText(true)
+          duration: 0.6, 
+          ease: "power2.out"
         }
       );
     }
 
   if (appState === 'revealed' && slipRef.current) {
       gsap.to(slipRef.current, {
-        top: '-15vh',
+        top: isMobile ? '18%' : '-15vh',
         duration: 0.8,
         ease: "power2.inOut",
         onComplete: () => {
@@ -717,7 +872,7 @@ export default function App() {
     backgroundImage: `url(${isMobile ? '/visual/bg-table-mobile.webp' : '/visual/bg-table-desktop.webp'})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    transition: 'opacity 0.5s duration'
+    transition: 'opacity 0.5s'
   };
 
   const overlayStyle: React.CSSProperties = {
@@ -734,6 +889,8 @@ export default function App() {
     pointerEvents: 'auto'
   };
 
+  const promptFontSize = isMobile ? '22px' : '50px';
+
   const iconButtonStyle: React.CSSProperties = {
     width: '48px',
     height: '48px',
@@ -743,7 +900,8 @@ export default function App() {
     background: 'none',
     border: 'none',
     cursor: 'pointer',
-    padding: 0
+    padding: 0,
+    WebkitTapHighlightColor: 'transparent'
   };
 
   const gearButtonStyle: React.CSSProperties = {
@@ -754,7 +912,8 @@ export default function App() {
     padding: 0,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    WebkitTapHighlightColor: 'transparent'
   };
 
   const onboardingStyle: React.CSSProperties = {
@@ -765,7 +924,8 @@ export default function App() {
     alignItems: 'center',
     justifyContent: 'center',
     pointerEvents: 'auto',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    WebkitTapHighlightColor: 'transparent'
   };
 
   const pulseCircleStyle: React.CSSProperties = {
@@ -780,7 +940,7 @@ export default function App() {
   const onboardingTextStyle: React.CSSProperties = {
     color: 'white',
     fontFamily: "'Playfair Display', serif",
-    fontSize: isMobile ? '26px' : '50px',
+    fontSize: promptFontSize,
     fontWeight: 'bold',
     letterSpacing: '0.05em',
     textShadow: '0 2px 4px rgba(0,0,0,0.3)',
@@ -792,8 +952,8 @@ export default function App() {
   const cookiesContainerStyle: React.CSSProperties = {
     position: 'relative',
     width: '100%',
-    maxWidth: '1000px',
-    height: isMobile ? '410px' : '300px',
+    maxWidth: isMobile ? '520px' : '1000px',
+    height: isMobile ? '400px' : '300px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -805,15 +965,18 @@ export default function App() {
     
     return {
       position: 'absolute',
-      width: isMobile ? '180px' : '180px',
-      height: isMobile ? '180px' : '180px',
+      width: isMobile ? '252px' : '180px',
+      height: isMobile ? '252px' : '180px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       cursor: openedToday.includes(index + 1) ? 'default' : 'pointer',
       transition: 'transform 0.25s ease-out, filter 0.25s ease-out',
       filter: openedToday.includes(index + 1) ? 'grayscale(1) opacity(0.2)' : 'drop-shadow(0 4px 6px rgba(0,0,0,0.2))',
-      zIndex: 10 + index
+      zIndex: 10 + index,
+      userSelect: 'none',
+      WebkitTapHighlightColor: 'transparent',
+      outline: 'none'
     };
   };
 
@@ -874,7 +1037,7 @@ export default function App() {
               style={{
                 ...onboardingTextStyle,
                 position: 'absolute',
-                top: isMobile ? '22%' : '10%',
+                top: '18%',
                 opacity: 0,
                 textAlign: 'center',
                 width: '100%',
@@ -895,7 +1058,7 @@ export default function App() {
                   fontFamily: "'Playfair Display', serif",
                   fontStyle: 'italic',
                   fontWeight: 'bold',
-                  fontSize: '32px',
+                  fontSize: promptFontSize,
                   textShadow: '0 2px 8px rgba(0,0,0,0.5)',
                   textAlign: 'center',
                   animation: 'fadeIn 0.8s ease-out forwards',
@@ -905,16 +1068,35 @@ export default function App() {
                 Tap to crack it open
               </div>
             )}
-            
+
             <div ref={cookiesContainerRef} style={cookiesContainerStyle}>
               {[1, 2, 3, 4].map((num, i) => (
                 <div
                   key={num}
                   ref={el => cookieRefs.current[i] = el}
                   style={getCookieStyle(i)}
-                  onClick={() => {
+                  onClick={(e) => {
                     if (appState === 'selecting') {
-                      handleCookieClick(i);
+                      const container = cookiesContainerRef.current;
+                      if (container) {
+                        const rect = container.getBoundingClientRect();
+                        const clickX = e.clientX - rect.left - rect.width / 2;
+                        const clickY = e.clientY - rect.top - rect.height / 2;
+                        const offsets = isMobile ? MOBILE_COOKIE_OFFSETS : COOKIE_OFFSETS;
+                        let closestIdx = -1;
+                        let minDist = Infinity;
+                        offsets.forEach((offset, idx) => {
+                          if (openedToday.includes(idx + 1)) return;
+                          const dist = Math.sqrt((clickX - offset.x) ** 2 + (clickY - offset.y) ** 2);
+                          if (dist < minDist) {
+                            minDist = dist;
+                            closestIdx = idx;
+                          }
+                        });
+                        if (closestIdx === i) {
+                          handleCookieClick(i);
+                        }
+                      }
                     } else if (appState === 'selected' && i === selectedCookieIndex) {
                       handleCookieTap();
                     }
@@ -936,7 +1118,7 @@ export default function App() {
                     <img 
                       src={`/visual/cookie-${num}.png`} 
                       alt={`Cookie ${num}`} 
-                      style={{ width: isMobile ? '180px' : '320px', height: isMobile ? '180px' : '320px', minWidth: isMobile ? '180px' : '320px', objectFit: 'contain' }}
+                      style={{ width: isMobile ? '245px' : '320px', height: isMobile ? '245px' : '320px', minWidth: isMobile ? '245px' : '320px', objectFit: 'contain' }}
                       referrerPolicy="no-referrer"
                     />
                   ) : (
@@ -962,21 +1144,19 @@ export default function App() {
             onMouseDown={handleDragStart}
             onTouchStart={handleDragStart}
           >
-            {/* 800px container matches the 320px image scaled by 2.5 from the 'selected' state */}
-            <div style={{ position: 'relative', width: '800px', height: '800px', transform: isMobile ? 'scale(0.43)' : 'none', transformOrigin: 'center center' }}>
               {/* Hint Text */}
               {appState === 'splitting' && splitGap < 20 && (
                 <div 
                   style={{
                     position: 'absolute',
-                    top: '15%',
+                    top: '18%',
                     left: 0,
                     width: '100%',
                     color: 'white',
                     fontFamily: "'Playfair Display', serif",
                     fontStyle: 'italic',
                     fontWeight: 'bold',
-                    fontSize: isMobile ? '30px' : '24px',
+                    fontSize: promptFontSize,
                     textShadow: '0 2px 8px rgba(0,0,0,0.5)',
                     textAlign: 'center',
                     animation: 'fadeIn 0.8s ease-out forwards',
@@ -987,117 +1167,122 @@ export default function App() {
                 </div>
               )}
 
-              {/* Paper Slip Masked Wrapper (Revealed as gap grows) */}
-              <div 
-                style={{ 
-                  position: 'absolute', 
-                  left: '50%',
-                  top: '50%',
-                  transform: 'translate(-50%, -50%)',
-                  width: `${splitGap * 2}px`, 
-                  height: '100%',
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  justifyContent: 'center',
-                  overflow: 'hidden',
-                  pointerEvents: 'none',
-                  zIndex: 5,
-                  userSelect: 'none',
-                  WebkitUserSelect: 'none',
-                  WebkitTouchCallout: 'none'
-                }}
-              >
-                <div style={{ position: 'relative', width: '600px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img 
-                    src="/visual/paper-slip.webp" 
-                    alt="Paper Slip" 
-                    style={{ 
-                      width: '100%',
-                      height: 'auto',
-                      objectFit: 'contain',
-                      opacity: Math.min(splitGap / 30, 1)
-                    }} 
-                    referrerPolicy="no-referrer" 
-                  />
-                  {showQuoteText && (
-                    <div 
+            {/* 800px container matches the 320px image scaled by 2.5 from the 'selected' state */}
+            <div style={{ position: 'relative', width: '800px', height: '800px', transform: 'none', transformOrigin: 'center center' }}>
+              <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', transform: isMobile ? 'scale(0.674)' : 'none', transformOrigin: 'center center' }}>
+                {/* Paper Slip Masked Wrapper (Revealed as gap grows) */}
+                <div 
+                  className="split-slip-wrapper"
+                  style={{ 
+                    position: 'absolute', 
+                    left: '50%',
+                    top: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: `${splitGap * 2}px`, 
+                    height: '100%',
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    overflow: 'hidden',
+                    pointerEvents: 'none',
+                    zIndex: 5,
+                    userSelect: 'none',
+                    WebkitUserSelect: 'none',
+                    WebkitTouchCallout: 'none'
+                  }}
+                >
+                  <div style={{ position: 'relative', width: '600px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <img 
+                      src="/visual/paper-slip.webp" 
+                      alt="Paper Slip" 
                       style={{ 
-                        position: 'absolute', 
-                        inset: 0, 
-                        display: 'flex', 
-                        alignItems: 'center', 
-                        justifyContent: 'center',
-                        padding: '16px 24px',
-                        textAlign: 'center',
-                        fontFamily: "'EB Garamond', serif",
-                        fontSize: '24px', // Slightly larger for the 800px context
-                        fontWeight: 500,
-                        color: '#1A3A5C',
-                        lineHeight: '1.3',
-                        fontStyle: 'italic',
-                        overflow: 'hidden',
+                        width: '100%',
+                        height: 'auto',
+                        objectFit: 'contain',
                         opacity: Math.min(splitGap / 30, 1)
-                      }}
-                    >
-                      {formatFortune(fortuneText)}
-                    </div>
-                  )}
+                      }} 
+                      referrerPolicy="no-referrer" 
+                    />
+                    {showQuoteText && (
+                      <div 
+                        style={{ 
+                          position: 'absolute', 
+                          inset: 0, 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          justifyContent: 'center',
+                          padding: '16px 24px',
+                          textAlign: 'center',
+                          fontFamily: "'EB Garamond', serif",
+                          fontSize: '24px', // Slightly larger for the 800px context
+                          fontWeight: 500,
+                          color: '#1A3A5C',
+                          lineHeight: '1.3',
+                          fontStyle: 'italic',
+                          overflow: 'hidden',
+                          opacity: Math.min(splitGap / 30, 1)
+                        }}
+                      >
+                        {formatFortune(fortuneText)}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
 
-              {/* Left Half (Clipped from main image) */}
-              <div 
-                style={{ 
-                  position: 'absolute', 
-                  left: '50%', 
-                  top: '50%', 
-                  width: '800px', 
-                  height: '800px', 
-                  transform: `translate(calc(-50% - ${splitGap}px), -50%)`,
-                  clipPath: getJaggedClipPath(true),
-                  cursor: appState === 'splitting' ? 'grab' : 'default',
-                  pointerEvents: 'none',
-                  zIndex: 10
-                }}
-              >
-                <img 
-                  src={`/visual/cookie-${selectedCookieIndex + 1}.png`} 
-                  alt="Cookie Left" 
-                  style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
-                  referrerPolicy="no-referrer"
+                {/* Left Half (Clipped from main image) */}
+                <div 
+                  style={{ 
+                    position: 'absolute', 
+                    left: '50%', 
+                    top: '50%', 
+                    width: '800px', 
+                    height: '800px', 
+                    transform: `translate(calc(-50% - ${splitGap}px), -50%)`,
+                    clipPath: getJaggedClipPath(true),
+                    cursor: appState === 'splitting' ? 'grab' : 'default',
+                    pointerEvents: 'none',
+                    zIndex: 10
+                  }}
+                >
+                  <img 
+                    src={`/visual/cookie-${selectedCookieIndex + 1}.png`} 
+                    alt="Cookie Left" 
+                    style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+
+                {/* Right Half (Clipped from main image) */}
+                <div 
+                  style={{ 
+                    position: 'absolute', 
+                    left: '50%', 
+                    top: '50%', 
+                    width: '800px', 
+                    height: '800px', 
+                    transform: `translate(calc(-50% + ${splitGap}px), -50%)`,
+                    clipPath: getJaggedClipPath(false),
+                    cursor: appState === 'splitting' ? 'grab' : 'default',
+                    pointerEvents: 'none',
+                    zIndex: 10
+                  }}
+                >
+                  <img 
+                    src={`/visual/cookie-${selectedCookieIndex + 1}.png`} 
+                    alt="Cookie Right" 
+                    style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+
+                {/* Canvas Overlay for Crumbs */}
+                <canvas 
+                  ref={canvasRef} 
+                  width={isMobile ? window.innerWidth : 800} 
+                  height={isMobile ? window.innerWidth : 800} 
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 15 }} 
                 />
               </div>
-
-              {/* Right Half (Clipped from main image) */}
-              <div 
-                style={{ 
-                  position: 'absolute', 
-                  left: '50%', 
-                  top: '50%', 
-                  width: '800px', 
-                  height: '800px', 
-                  transform: `translate(calc(-50% + ${splitGap}px), -50%)`,
-                  clipPath: getJaggedClipPath(false),
-                  cursor: appState === 'splitting' ? 'grab' : 'default',
-                  pointerEvents: 'none',
-                  zIndex: 10
-                }}
-              >
-                <img 
-                  src={`/visual/cookie-${selectedCookieIndex + 1}.png`} 
-                  alt="Cookie Right" 
-                  style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-
-              {/* Canvas Overlay for Crumbs */}
-              <canvas 
-                ref={canvasRef} 
-                width={isMobile ? window.innerWidth : 800} 
-                height={isMobile ? window.innerWidth : 800} 
-                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 15 }} 
-              />
             </div>
           </div>
         )}
@@ -1125,9 +1310,9 @@ export default function App() {
               }}
               style={{ 
                 position: 'fixed', 
-                top: '20%',
+                top: isMobile ? '42%' : '20%',
                 left: '50%',
-                transform: 'translateX(-50%)',
+                transform: isMobile ? 'translate(-50%, -50%)' : 'translateX(-50%)',
                 width: '90vw', 
                 maxWidth: '450px', 
                 minHeight: '100px',
@@ -1140,7 +1325,7 @@ export default function App() {
                 WebkitTouchCallout: 'none'
               }}
             >
-              <img src="/visual/paper-slip.webp" alt="Paper Slip" style={{ width: '130%', height: 'auto', objectFit: 'contain' }} referrerPolicy="no-referrer" />
+              <img src="/visual/paper-slip.webp" alt="Paper Slip" style={{ width: isMobile ? '95%' : '130%', height: 'auto', objectFit: 'contain' }} referrerPolicy="no-referrer" />
               {showQuoteText && (
                 <div 
                   style={{ 
@@ -1152,7 +1337,7 @@ export default function App() {
                     padding: '16px 24px',
                     textAlign: 'center',
                     fontFamily: "'EB Garamond', serif",
-                    fontSize: '20px',
+                    fontSize: isMobile ? '14px' : '20px',
                     fontWeight: 500,
                     color: '#1A3A5C',
                     lineHeight: '1.3',
@@ -1170,17 +1355,17 @@ export default function App() {
               <div 
                 style={{
                   position: 'fixed',
-                  top: 'calc(30vh - 80px)',
+                  top: '18%',
                   left: 0,
                   width: '100%',
                   color: 'white',
                   fontFamily: "'Playfair Display', serif",
                   fontStyle: 'italic',
                   fontWeight: 'bold',
-                  fontSize: '24px',
+                  fontSize: promptFontSize,
                   textShadow: '0 2px 8px rgba(0,0,0,0.5)',
                   textAlign: 'center',
-                  animation: 'fadeIn 1s ease-out 0.5s forwards',
+                  animation: 'fadeIn 0.4s ease-out 0.2s forwards',
                   opacity: 0
                 }}
               >
@@ -1193,10 +1378,11 @@ export default function App() {
               <div 
                 style={{ 
                   position: 'fixed',
-                  top: '20vh',
+                  top: isMobile ? '30vh' : '20vh',
                   left: '50%',
                   transform: 'translateX(-50%)',
-                  width: '80%',
+                  width: isMobile ? '95vw' : '80%',
+                  maxWidth: isMobile ? '420px' : 'none',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -1206,14 +1392,15 @@ export default function App() {
                 <div 
                   ref={cardRef}
                   style={{ 
-                    width: '50vw',
-                    maxWidth: '240px',
-                    maxHeight: '55vh',
+                    width: isMobile ? '93vw' : '50vw',
+                    maxWidth: isMobile ? '400px' : '240px',
+                    maxHeight: isMobile ? '76vh' : '55vh',
+                    minHeight: 'auto',
                     backgroundColor: 'transparent',
                     backgroundImage: "url('/visual/parchment.webp')",
                     backgroundSize: '100% 100%',
                     backgroundRepeat: 'no-repeat',
-                    padding: '15% 12%',
+                    padding: isMobile ? '30% 17% 28%' : '15% 8%',
                     color: '#4A3520',
                     fontFamily: "'MedievalSharp', cursive",
                     overflow: 'hidden',
@@ -1226,15 +1413,15 @@ export default function App() {
                   {/* Content Rows */}
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                     <div className="parchment-line" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', opacity: 0 }}>
-                      <span style={{ fontSize: '18px', color: '#4A3520' }}>Date</span>
-                      <span style={{ fontSize: '18px', color: '#6D4C2A' }}>{new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                      <span style={{ fontSize: isMobile ? '15px' : '18px', color: '#4A3520' }}>Date</span>
+                      <span style={{ fontSize: isMobile ? '15px' : '18px', color: '#6D4C2A' }}>{new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
                     </div>
 
                     <div className="parchment-line" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', opacity: 0 }}>
-                      <span style={{ fontSize: '18px', color: '#4A3520' }}>Lucky Color</span>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                        <span style={{ fontSize: '18px', color: '#6D4C2A' }}>{fortuneData?.color.name}</span>
-                        <svg width="40" height="14" viewBox="0 0 40 14" style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '6px' }}>
+                      <span style={{ fontSize: isMobile ? '15px' : '18px', color: '#4A3520' }}>Lucky Color</span>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
+                        <span style={{ fontSize: isMobile ? '15px' : '18px', color: '#6D4C2A' }}>{fortuneData?.color.name}</span>
+                        <svg width="40" height="14" viewBox="0 0 40 14" style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '1px' }}>
                           <defs>
                             <filter id="rough">
                               <feTurbulence type="turbulence" baseFrequency="0.08" numOctaves="4" result="noise"/>
@@ -1247,7 +1434,7 @@ export default function App() {
                     </div>
 
                     <div className="parchment-line" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', opacity: 0 }}>
-                      <span style={{ fontSize: '16px', color: '#4A3520' }}>Wealth</span>
+                      <span style={{ fontSize: isMobile ? '13px' : '16px', color: '#4A3520' }}>Wealth</span>
                       <div style={{ display: 'flex', gap: '2px' }}>
                         {[1, 2, 3, 4, 5].map((star) => {
                           const isHalf = (fortuneData?.wealth || 0) === star - 0.5;
@@ -1273,7 +1460,7 @@ export default function App() {
                     </div>
 
                     <div className="parchment-line" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', opacity: 0 }}>
-                      <span style={{ fontSize: '16px', color: '#4A3520' }}>Love</span>
+                      <span style={{ fontSize: isMobile ? '13px' : '16px', color: '#4A3520' }}>Love</span>
                       <div style={{ display: 'flex', gap: '2px' }}>
                         {[1, 2, 3, 4, 5].map((star) => {
                           const isHalf = (fortuneData?.love || 0) === star - 0.5;
@@ -1299,7 +1486,7 @@ export default function App() {
                     </div>
 
                     <div className="parchment-line" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', opacity: 0 }}>
-                      <span style={{ fontSize: '16px', color: '#4A3520' }}>Career</span>
+                      <span style={{ fontSize: isMobile ? '13px' : '16px', color: '#4A3520' }}>Career</span>
                       <div style={{ display: 'flex', gap: '2px' }}>
                         {[1, 2, 3, 4, 5].map((star) => {
                           const isHalf = (fortuneData?.career || 0) === star - 0.5;
@@ -1339,10 +1526,10 @@ export default function App() {
                       }}
                     >
                       {[
-                        { label: 'Home', emoji: '←', action: handleBackHome },
-                        { label: 'Save', emoji: '💾', action: handleSaveFortune },
-                        { label: 'Share', emoji: '🔗', action: () => console.log("TODO: Share") },
-                        { label: 'History', emoji: '📖', action: () => setAppState('history') }
+                        { label: ' Home', emoji: '←', action: handleBackHome },
+                        { label: ' Save', emoji: '💾', action: handleSaveFortune },
+                        { label: ' Share', emoji: '🔗', action: () => console.log("TODO: Share") },
+                        { label: ' History', emoji: '📖', action: () => setAppState('history') }
                       ].map((btn) => (
                         <button
                           key={btn.label}
@@ -1352,14 +1539,14 @@ export default function App() {
                             border: 'none',
                             color: '#4A3520',
                             fontFamily: "'MedievalSharp', cursive",
-                            fontSize: '18px',
+                            fontSize: isMobile ? '14px' : '18px',
                             opacity: 0.7,
                             cursor: 'pointer',
                             display: 'flex',
                             alignItems: 'center',
-                            gap: '4px',
+                            gap: isMobile ? '8px' : '4px',
                             transition: 'opacity 0.2s',
-                            padding: '6px 8px'
+                            padding: isMobile ? '4px 6px' : '6px 8px'
                           }}
                           onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
                           onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}
@@ -1389,7 +1576,7 @@ export default function App() {
             backgroundColor: '#2C1810',
             backdropFilter: 'blur(10px)',
             overflowY: 'auto',
-            padding: '40px 20px',
+            padding: '80px 20px',
             pointerEvents: 'auto'
           }}>
             {/* Back Button */}
@@ -1401,7 +1588,7 @@ export default function App() {
                 left: '20px',
                 background: 'none',
                 border: 'none',
-                color: '#4A3520',
+                color: '#FFFFFF',
                 fontFamily: "'Playfair Display', serif",
                 fontSize: '18px',
                 cursor: 'pointer',
@@ -1430,20 +1617,20 @@ export default function App() {
               const history = JSON.parse(localStorage.getItem('fortune_history') || '[]');
               if (history.length === 0) {
                 return (
-                  <div style={{ textAlign: 'center', marginTop: '80px' }}>
-                    <p style={{ color: '#4A3520', fontFamily: "'Playfair Display', serif", fontSize: '18px', fontStyle: 'italic', opacity: 0.7 }}>
+                  <div style={{ textAlign: 'center', marginTop: '100px' }}>
+                    <p style={{ color: '#4A3520', fontFamily: "'Playfair Display', serif", fontSize: '20px', fontStyle: 'italic', opacity: 0.7 }}>
                       Your fortune collection is empty.
                     </p>
                     <button
                       onClick={() => setAppState('selecting')}
                       style={{
-                        marginTop: '24px',
+                        marginTop: '12px',
                         background: 'rgba(255,255,255,0.15)',
                         border: '1px solid rgba(255,255,255,0.3)',
                         color: '#4A3520',
                         fontFamily: "'Playfair Display', serif",
-                        fontSize: '16px',
-                        padding: '12px 24px',
+                        fontSize: '24px',
+                        padding: '12px 15px',
                         borderRadius: '8px',
                         cursor: 'pointer'
                       }}
@@ -1553,6 +1740,7 @@ export default function App() {
       <audio ref={audioPaperSlideRef} src="/audio/paper-slide.wav" />
 
       <style>{`
+        * { -webkit-tap-highlight-color: transparent; }
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }
           to { opacity: 1; transform: translateY(0); }
